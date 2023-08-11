@@ -1,0 +1,112 @@
+/*
+ *  Flex Layout Specifics
+*/
+main{
+  display:flex;
+  flex-direction:row;
+}
+
+body {
+  background-color: #1D1D1B;
+}
+
+.round{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  width:200px;
+  list-style:none;
+  padding:0;
+}
+  .round .spacer{ flex-grow:1; }
+  .round .spacer:first-child,
+  .round .spacer:last-child{ flex-grow:.5; }
+
+  .round .game-spacer{
+    flex-grow:1;
+  }
+
+/*
+ *  General Styles
+*/
+body{
+  font-family:sans-serif;
+  font-size:small;
+  padding:10px;
+  line-height:1.4em;
+}
+
+.game {
+  height: 45px;
+  position: relative;
+}
+
+li.game.nofirst{
+  padding-left:20px;
+}
+
+  li.game.winner{
+    font-weight:bold;
+  }
+  li.game span{
+    float:right;
+    margin-right:5px;
+  }
+
+  li.game-top{
+     border-bottom:1px solid #aaa;
+     display: flex;
+    flex-direction: column;
+    justify-content: end; 
+  }
+
+  li.game-spacer{ 
+    border-right:1px solid #aaa;
+    height: 70px;
+  }
+
+  li.game-bottom{ 
+    border-top:1px solid #aaa;
+  }
+
+  .itemContainerTop {
+    position: absolute;
+    bottom: -20px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+    padding: 12px 14px 12px 10px;
+    align-items: flex-start;
+    gap: 8px;
+    color: white;
+    border-radius: 10px;
+    border: 0.5px solid #636363;
+    background: linear-gradient(180deg, #292929 0%, #1D1D1B 100%);
+
+  }
+
+  .itemContainerBot {
+    position: absolute;
+    top: -23px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    max-width: 200px;
+    padding: 12px 14px 12px 24px;
+    align-items: flex-start;
+    gap: 8px;
+    color: white;
+    border-radius: 10px;
+    border: 0.5px solid #636363;
+    background: linear-gradient(180deg, #292929 0%, #1D1D1B 100%);
+  }
+
+  .itemBlank {
+    background: #1D1D1B;
+  }
+
+  .itemLose {
+    color: #CDCDCD;
+    background: linear-gradient(180deg, #7C7C7C 0%, #636363 100%);
+  }
